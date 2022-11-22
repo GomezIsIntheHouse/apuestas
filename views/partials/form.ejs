@@ -1,0 +1,145 @@
+
+<style>
+          .formdata{
+
+padding: 25px;
+border:2px solid black;
+border-radius: 10px;
+/* background-color: rgb(201, 126, 28); */
+}
+form{
+justify-content: space-evenly;
+border-radius: 73px;
+background: #55686436;
+/* box-shadow:  -30px 30px 59px #5a4b5c,
+             30px -30px 59px #725f74; */
+}
+.font{
+ font-size: 8px;
+}
+
+
+</style>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  function hi(){
+    Swal.fire({
+      title: '<strong>Cotización USD Blue</strong>',
+      icon: 'info',
+      html:
+        '<a target="_blank" href="https://dolarhoy.com/cotizaciondolarblue">Ver cotización</a> ',
+        
+      showCloseButton: true,
+      
+      focusConfirm: false,
+      confirmButtonText:
+        '<i class="fa fa-thumbs-up"></i> close!',
+      
+     
+     
+    })
+
+  }
+</script>
+<form class="formdata" method="post" action="/productos">
+  
+    <label style="color: rgb(224, 51, 51);">Indentificación</label>
+      <div class="d-flex justify-content-center">
+        <div class="ms-3">
+
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" name="name" required>
+        </div>
+        <div class="ms-3">
+
+          <label for="exampleInputEmail1" class="form-label">Lastname</label>
+          <input type="text" class="form-control" name="lastname" >
+        </div>
+        <div class="ms-3">
+
+          <label for="exampleInputEmail1" class="form-label">DNI</label>
+          <input type="text" class="form-control" name="dni" >
+        </div>
+        <div class="ms-3">
+
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="text" class="form-control" name="email" >
+        </div>
+      </div>
+
+      <label style="color: rgb(224, 51, 51);">Completa el prode</label>
+
+      <div class="container text-center">
+        
+     
+        <div class="d-flex row justify-content-center">
+          
+          <div class="col-4">
+            <label>Argentina</label>
+            <input type="text" class="form-control" name="arg1" required>
+
+          </div>
+          
+          <div class="col-4">
+            <label>Arabia Saudita</label>
+            <input type="text" class="form-control" name="ara" required>
+
+          </div>
+          <!-- <div class="col">  
+            <button class=" btn btn-outline-success" type="button" onclick="hi()" >
+              info
+            </button>
+          </div> -->
+          
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <label>Argentina</label>
+            <input type="text" class="form-control" name="arg2" required>
+
+          </div>
+          
+          <div class="col-4">
+            <label>Polonia</label>
+            <input type="text" class="form-control" name="pol" required>
+
+          </div>
+          
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <label>Argentina</label>
+            <input type="text" class="form-control" name="arg3" required>
+
+          </div>
+          
+          <div class="col-4">
+            <label>Mexico</label>
+            <input type="text" class="form-control" name="mex" required>
+
+          </div>
+          
+        </div>
+
+      </div>
+      
+
+      <div class="d-flex mt-3 flex-column">
+        <label style="color: rgb(224, 51, 51);">Apuesta en USD</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text">$</span>
+          <input type="number" name="apuest" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-text">.00</span>
+          <button type="button" class="ms-1 btn btn-outline-success" onclick="hi()">Info</button>
+        </div>
+      </div>
+
+
+
+      <div class=" d-flex mt-3  justify-content-end" >
+      
+          <button type="submit" class="btn btn-primary">Submit</button>
+        
+      </div>
+     
+</form>
